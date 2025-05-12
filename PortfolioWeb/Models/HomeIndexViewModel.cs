@@ -1,4 +1,6 @@
-﻿namespace PortfolioWeb.Models
+﻿using PortfolioWeb.Servicios;
+
+namespace PortfolioWeb.Models
 {
     public class HomeIndexViewModel
     {

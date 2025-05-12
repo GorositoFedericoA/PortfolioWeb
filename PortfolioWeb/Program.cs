@@ -1,7 +1,17 @@
+using PortfolioWeb.Servicios;
+
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddTransient<IRepositorioProyectos, RepositorioProyectos>();//cuando se pida el IRepositorioProyectos, se envía una instancia de RepositorioProyectos
+builder.Services.AddTransient<IServicioEmail, ServicioEmail>();
+
+
+
+
+
 
 var app = builder.Build();
 

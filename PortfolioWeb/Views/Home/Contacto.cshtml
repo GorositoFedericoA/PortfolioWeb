@@ -1,0 +1,41 @@
+﻿@model ContactoViewModel
+
+@{
+    ViewData["Title"] = "Contacto";
+}
+
+<div class="container mt-3 p-2">
+    <h1 class="title text-center">Contacto</h1>
+
+
+    <form class="m-2 p-2 " asp-controller="Home" asp-action="Contacto" method="post">
+        <div class="mb-3">
+            <label asp-for="Nombre" class="form-label">Nombre:</label>
+            <input asp-for="Nombre" type="text" class="form-control" name="nombre" placeholder="Escriba su nombre..." />
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Email" class="form-label">Email:</label>
+            <input asp-for="Email" type="email" class="form-control" name="email" placeholder="nombre@ejemplo.com" />
+        </div>
+        <div class="mb-3">
+            <label asp-for="Mensaje" class="form-label">Mensaje:</label>
+            <textarea asp-for="Mensaje" class="form-control" name="mensaje" rows="3" placeholder="Escriba su mensaje..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">
+            Enviar
+        </button>
+    </form>
+
+</div>
+
+@if (TempData["SwalMessage"] != null)
+{
+    <script>
+        Swal.fire({
+            icon: '@TempData["SwalIcon"]',
+            title: '¡Éxito!',
+            text: '@TempData["SwalMessage"]'
+        });
+    </script>
+}
