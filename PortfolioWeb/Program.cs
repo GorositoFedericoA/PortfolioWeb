@@ -1,4 +1,5 @@
 using PortfolioWeb.Servicios;
+using Microsoft.Extensions.Configuration;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -9,6 +10,8 @@ builder.Services.AddTransient<IRepositorioProyectos, RepositorioProyectos>();//c
 builder.Services.AddTransient<IServicioEmail, ServicioEmail>();
 
 
+//Add Configuration secrets
+builder.Configuration.AddUserSecrets<Program>();
 
 
 

@@ -35,10 +35,10 @@ namespace PortfolioWeb.Servicios
                 await smtpCliente.SendMailAsync(mensaje);
 
             }
-            catch (Exception ex)
+            catch (Exception)
             {
 
-                throw ex;
+                throw ;
             }
         }
 
