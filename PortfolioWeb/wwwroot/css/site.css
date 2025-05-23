@@ -12,3 +12,69 @@ html, body {
 .content-wrap {
     flex: 1;
 }
+
+/*CONTAINERS*/
+
+.home-container {
+    height: 85vh;
+}
+
+/*HOME*/
+
+
+.social-icons {
+    
+}
+
+/**********ACERCA DE MI**********/
+
+.icon {
+    max-width: 3rem;
+}
+
+.about-index-container {
+    margin-top: -3rem;
+}
+.about-container {
+    max-width: 50rem;
+    padding: 1rem;
+}
+
+.habilidades ul {
+    text-align: center;
+}
+
+
+    .habilidades ul li {
+        list-style: none;
+        padding: 0.1rem;
+    }
+
+.educacion ul li {
+    list-style: none;
+    padding: 0.3rem;
+}
+
+.habilidades-educacion-container {
+    border: 2px solid #000;
+    border-radius: 5px;
+    padding: 0.5rem;
+}
+
+@media (min-width: 768px) {
+    .border-md-start {
+        border-left: 2px solid #000; /* Color y grosor de la línea */
+        padding-left: 20px;
+    }
+}
+
+.acercaDeMi-container {
+    margin-top: 3rem;
+}
+
+/*FOOTER*/
+
+.layout-footer {
+    background-color: #f8f9fa;
+    padding: 1rem;
+}

@@ -43,6 +43,11 @@ namespace PortfolioWeb.Controllers
             return View(listadoProyectos);
         }
 
+        public IActionResult AcercaDeMi() 
+        {
+            return View();
+        }
+
 
         [HttpGet]
         public IActionResult Contacto()

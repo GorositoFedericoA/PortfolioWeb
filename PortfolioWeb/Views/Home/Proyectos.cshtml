@@ -1,15 +1,16 @@
-﻿
-@model IEnumerable<Proyecto>
+﻿@model IEnumerable<Proyecto>
 
 @{
     ViewData["Title"] = "Proyectos";
 }
+<div class="mt-3">
 
-<div class="container text-center">
-    <h2>Proyectos</h2>
-    <p>Estos son mis proyectos!</p>
+    <div class="text-center">
+        <h2>Proyectos</h2>
+        <p>Estos son mis proyectos!</p>
 
+    </div>
+
+
+    <partial name="_ListadoProyectos" model="Model" />
 </div>
-
-
-<partial name="_ListadoProyectos" model="Model" />

@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/PortfolioWeb.styles.css" asp-append-version="true" />
 </head>
-<body class="d-flex flex-column min-vh-100">
+<body class=" d-flex flex-column min-vh-100">
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container-fluid">
@@ -30,6 +30,9 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="AcercaDeMi">Acerca de mí</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Proyectos">Proyectos</a>
                         </li>
                         <li class="nav-item">
@@ -42,17 +45,22 @@
         </nav>
 
     </header>
-    <div class="container">
-        <main role="main">
-            @RenderBody()
-        </main>
-    </div>
+    <main role="main" class="flex-fill">
+        @RenderBody()
+    </main>
 
-    <footer class="border-top footer text-muted">
+
+    <footer class="border-top text-muted layout-footer">
         <div class="container-fluid">
-            &copy; 2025 - PortfolioWeb - <a asp-area="" asp-controller="Home" asp-action="Index">Inicio</a>
+            &copy; 2025 - PortfolioWeb -
+            <a asp-area="" asp-controller="Home" asp-action="Index">Inicio</a> -
+            <a asp-area="" asp-controller="Home" asp-action="AcercaDeMi">Acerca de mí</a> -
+            <a asp-area="" asp-controller="Home" asp-action="Proyectos">Proyectos</a> -
+            <a asp-area="" asp-controller="Home" asp-action="Contacto">Contacto</a>
         </div>
     </footer>
+
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
