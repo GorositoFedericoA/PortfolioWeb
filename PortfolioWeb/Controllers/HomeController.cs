@@ -1,7 +1,10 @@
-using System.Diagnostics;
+using Microsoft.AspNetCore.DataProtection;
 using Microsoft.AspNetCore.Mvc;
 using PortfolioWeb.Models;
 using PortfolioWeb.Servicios;
+using System.Diagnostics;
+using System.Reflection;
+using System.Text.Json;
 
 
 namespace PortfolioWeb.Controllers
@@ -58,11 +61,19 @@ namespace PortfolioWeb.Controllers
         [HttpPost]
         public async Task <IActionResult> Contacto(ContactoViewModel contactoViewModel) 
         {
+
+            if (!ModelState.IsValid) 
+            {
+                return View(contactoViewModel);
+            }
+
             await _servicioEmail.EnviarEmail(contactoViewModel);
+
+            TempData["Mensaje"] = "El mensaje fue enviado correctamente. Te responderé a la brevedad.";    
             return RedirectToAction("Contacto");
         }
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+        
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
