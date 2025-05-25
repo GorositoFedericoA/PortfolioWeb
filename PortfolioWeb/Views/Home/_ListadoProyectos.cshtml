@@ -3,26 +3,30 @@
 
 @{
 
-    if (Model != null)
+    @if (Model != null)
     {
         <div class="container mb-2 text-center">
             <div class="d-flex flex-wrap justify-content-center">
                 @foreach (var proyecto in Model)
                 {
                     <div class="card text-center p-2 m-2" style="width: 20rem;">
-                        <img src=@proyecto.ImgURL class="card-img-top" alt="imagen-proyecto">
-                        <div class="card-body text-center">
+                        <img src="@proyecto.ImgURL" class="card-img-top" style="height:17rem;" alt="imagen-proyecto">
+
+                        <div class="card-body">
                             <h5 class="card-title">@proyecto.Titulo</h5>
                             <p class="card-text">@proyecto.Descripcion</p>
-                            <div class="text-center m-1 card-footer">
-                                <a href=@proyecto.Link class="btn btn-primary p-1">Link del proyecto</a>
-                            </div>
+                        </div>
+
+                        <!-- Footer fuera del card-body y centrado -->
+                        <div class="card-footer d-flex justify-content-center">
+                            <a href="@proyecto.Link" class="btn btn-primary p-1">Link del proyecto</a>
                         </div>
                     </div>
                 }
-
             </div>
         </div>
+    }
+
 
     }
 }
