@@ -18,23 +18,23 @@ namespace PortfolioWeb.Servicios
                 new Proyecto
                 {
                 ImgURL ="/assets/project-1.png",
-                Titulo="Proyecto",
-                Descripcion="Proyecto realizado con .NET",
-                Link="https://github.com/GorositoFedericoA"
+                Titulo="Proyecto Ecommerce React",
+                Descripcion="Proyecto hecho con React, js, html, css conectada con firebase para carrito de compras. Proximo a mejorar el frontend y agregar API .NET para back",
+                Link="https://wonderful-stone-089b2841e.6.azurestaticapps.net"
                 },
 
                 new Proyecto
                 {
                 ImgURL ="/assets/project-2.png",
-                Titulo="Proyecto 2",
-                Descripcion="Proyecto realizado con .NET",
+                Titulo="Proyecto Portfolio Web",
+                Descripcion="Proyecto realizado con ASP .NET Core MVC, usando http post para el envío de mails e inyeccion de dependencias",
                 Link="https://github.com/GorositoFedericoA"
                 },
                 new Proyecto
                 {
                 ImgURL ="/assets/project-3.png",
-                Titulo="Proyecto 3",
-                Descripcion="Proyecto realizado con .NET",
+                Titulo="Proyecto Manejo de Presupuestos",
+                Descripcion="Próximo proyecto a realizar, web de manejo de presupuestos!",
                 Link="https://github.com/GorositoFedericoA"
                 }
             };
