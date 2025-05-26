@@ -28,7 +28,7 @@ namespace PortfolioWeb.Servicios
                 ImgURL ="/assets/project-2.png",
                 Titulo="Proyecto Portfolio Web",
                 Descripcion="Proyecto realizado con ASP .NET Core MVC, usando http post para el envío de mails e inyeccion de dependencias",
-                Link="https://github.com/GorositoFedericoA"
+                Link="https://portfolioweb-fjbqehhsc9hwe5a2.brazilsouth-01.azurewebsites.net/"
                 },
                 new Proyecto
                 {
